@@ -1,5 +1,3 @@
-# Task 4 - Firewall Configuration | Cyber Security Internship
-
 ## Objective:
 
 Configure and test basic firewall rules using **UFW (Uncomplicated Firewall)** on Linux. Understand how to block or allow network traffic on specific ports and verify the behavior through command-line testing.
