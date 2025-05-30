@@ -14,4 +14,4 @@
 4. Test rule effectiveness and remove the block.
 5. Document steps and results.
 
-**BY:** Sumit Singh Rawat
+**BY:** Mohit Joshi
