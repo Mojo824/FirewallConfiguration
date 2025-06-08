@@ -1,7 +1,7 @@
 name: mojo pipeline
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build:
