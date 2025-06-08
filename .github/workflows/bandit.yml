@@ -23,11 +23,11 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: ${{mojoai93@gmail.com }}
-          password: ${{nxkz jvxz aner nvzj}}
+          username: ${{secrets.MY_MAIL}}
+          password: ${{secrets.MY_PASS}}
           subject: Bandit Scan Results
           to: insane.mjoshi@gmail.com
-          from: GitHub Actions <${{mojoai93@gmail.com}}>
+          from: GitHub Actions <${{secrets.USR_MAIL}}>
           body: Please find the Bandit scan report attached.
           attachments: bandit-output.json
 
