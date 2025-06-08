@@ -1,0 +1,35 @@
+name: mojo pipeline
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+
+      - run: |
+          pip install bandit
+          bandit -r . -f json -o bandit-output.json
+
+      - run: docker build -t kali-rolling .
+
+      - run: docker push kali-rolling
+
+      - name: Email Bandit Report
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{mojoai93@gmail.com }}
+          password: ${{nxkz jvxz aner nvzj}}
+          subject: Bandit Scan Results
+          to: insane.mjoshi@gmail.com
+          from: GitHub Actions <${{mojoai93@gmail.com}}>
+          body: Please find the Bandit scan report attached.
+          attachments: bandit-output.json
+
+
+  
